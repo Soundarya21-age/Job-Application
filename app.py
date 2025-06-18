@@ -80,7 +80,7 @@ def delete_job(job_id):
 def update_job(job_id):
     data = request.json
 
-    update_expression = "SET #company=:company, #role=:role, #status=:status, #dateApplied=:dateApplied, #notes=:notes"
+    update_expression = "SET #company=:company, #role=:role, #status=:status, #dateApplied=:dateApplied,#deadline=:deadline, #notes=:notes"
     expression_attribute_names = {
         "#company": "company",
         "#role": "role",  # 'role' is a reserved keyword in DynamoDB
