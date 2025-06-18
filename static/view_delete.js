@@ -40,16 +40,27 @@ async function deleteJob(id) {
     showMessage("Failed to delete job.", true);
   }
 }
+function showMessage(msg, isError = false) {
+  const messageDiv = document.getElementById("message");
+  messageDiv.textContent = msg;
 
-function showMessage(message, isError = false) {
-  const msgDiv = document.getElementById("message");
-  msgDiv.textContent = message;
-  msgDiv.style.color = isError ? "red" : "green";
-  msgDiv.style.display = "block";
+  messageDiv.style.display = "block";
+  messageDiv.style.position = "fixed";
+  messageDiv.style.top = "20px";
+  messageDiv.style.left = "50%";
+  messageDiv.style.transform = "translateX(-50%)";
+  messageDiv.style.padding = "12px 24px";
+  messageDiv.style.borderRadius = "6px";
+  messageDiv.style.fontWeight = "bold";
+  messageDiv.style.fontSize = "16px";
+  messageDiv.style.backgroundColor = isError ? "#ffe0e0" : "#d4edda";
+  messageDiv.style.color = isError ? "#b00020" : "#155724";
+  messageDiv.style.boxShadow = "0 4px 8px rgba(0,0,0,0.2)";
+  messageDiv.style.zIndex = "1000";
+
   setTimeout(() => {
-    msgDiv.style.display = "none";
+    messageDiv.style.display = "none";
   }, 3000);
 }
-
 window.onload = fetchJobs;
 
