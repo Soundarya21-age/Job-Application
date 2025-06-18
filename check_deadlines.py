@@ -2,16 +2,16 @@ import boto3
 from datetime import datetime
 from botocore.exceptions import ClientError
 
-# Initialize DynamoDB
+//# Initialize DynamoDB
 dynamodb = boto3.resource('dynamodb', region_name='eu-north-1')
 table = dynamodb.Table('JobApplications')
 
-# Initialize AWS SES
+//# Initialize AWS SES
 ses = boto3.client('ses', region_name='eu-north-1')
 
-# Replace with your SES-verified email
-SENDER = "your-verified-email@example.com"
-RECIPIENT = "your-verified-email@example.com"  # Can be the same as sender
+//# Replace with your SES-verified email
+SENDER = "1da22cs162.cs@drait.edu.in"
+RECIPIENT = "1da22cs162.cs@drait.edu.in"  
 SUBJECT = "⏰ Job Application Deadline Alert"
 
 def send_email(job):
