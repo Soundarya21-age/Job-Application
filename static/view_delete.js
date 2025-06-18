@@ -19,6 +19,7 @@ jobList.style.gap = "20px";
       <p><strong>Role:</strong> ${job.role}</p>
       <p><strong>Status:</strong> ${job.status}</p>
       <p><strong>Date Applied:</strong> ${job.dateApplied}</p>
+      <p><strong>Deadline:</strong> ${job.deadline}</p>
       <p><strong>Notes:</strong> ${job.notes}</p>
       <div>
         <a href="/update?id=${job.jobId}" class="btn btn-update">Update</a>
