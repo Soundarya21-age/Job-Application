@@ -59,6 +59,7 @@ def add_job():
         'role': data['role'],
         'status': data['status'],
         'dateApplied': data['dateApplied'],
+        'deadline': data['deadline'],
         'notes': data['notes']
     }
     table.put_item(Item=item)
@@ -85,6 +86,7 @@ def update_job(job_id):
         "#role": "role",  # 'role' is a reserved keyword in DynamoDB
         "#status": "status",
         "#dateApplied": "dateApplied",
+        "#deadline": "deadline",
         "#notes": "notes"
     }
     expression_attribute_values = {
@@ -92,6 +94,7 @@ def update_job(job_id):
         ":role": data["role"],
         ":status": data["status"],
         ":dateApplied": data["dateApplied"],
+        ":deadline": data["deadline"],
         ":notes": data["notes"]
     }
 
