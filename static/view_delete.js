@@ -1,15 +1,14 @@
 const api = "https://job-application-yzyu.onrender.com/api/jobs";
 
 async function fetchJobs() {
-  const res = await fetch(api);
+  const res = await fetch(`${api}?t=${Date.now()}`); // Added timestamp
   const jobs = await res.json();
 
   const jobList = document.getElementById("jobList");
   jobList.innerHTML = "";
-jobList.style.display = "flex";
-jobList.style.flexWrap = "wrap";
-jobList.style.gap = "20px";
-
+  jobList.style.display = "flex";
+  jobList.style.flexWrap = "wrap";
+  jobList.style.gap = "20px";
 
   jobs.forEach((job) => {
     const jobDiv = document.createElement("div");
@@ -29,6 +28,7 @@ jobList.style.gap = "20px";
     jobList.appendChild(jobDiv);
   });
 }
+
 
 async function deleteJob(id) {
   const res = await fetch(`${api}/${id}`, { method: "DELETE" });
