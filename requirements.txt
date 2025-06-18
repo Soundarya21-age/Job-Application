@@ -2,4 +2,3 @@ Flask
 boto3
 flask_cors
 gunicorn
-email-validator
