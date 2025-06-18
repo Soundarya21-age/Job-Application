@@ -76,7 +76,11 @@
 
    <label for="dateApplied">Deadline:</label>
   <input type="text" id="deadline" placeholder="MM/DD/YYYY" onkeydown="return false;" onfocus="(this.type='date')" />
-
+  <script>
+  const deadlineInput = document.getElementById("deadline");
+  const today = new Date().toISOString().split('T')[0];
+  deadlineInput.min = today;
+</script>
   <label for="notes">Notes:</label>
   <textarea id="notes" name="notes"></textarea><br><br>
 
