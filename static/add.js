@@ -35,8 +35,20 @@ jobForm.addEventListener("submit", async (e) => {
 function showMessage(msg, isError = false) {
   const messageDiv = document.getElementById("message");
   messageDiv.textContent = msg;
-  messageDiv.style.color = isError ? "red" : "green";
+
   messageDiv.style.display = "block";
+  messageDiv.style.position = "fixed";
+  messageDiv.style.top = "20px";
+  messageDiv.style.left = "50%";
+  messageDiv.style.transform = "translateX(-50%)";
+  messageDiv.style.padding = "12px 24px";
+  messageDiv.style.borderRadius = "6px";
+  messageDiv.style.fontWeight = "bold";
+  messageDiv.style.fontSize = "16px";
+  messageDiv.style.backgroundColor = isError ? "#ffe0e0" : "#d4edda";
+  messageDiv.style.color = isError ? "#b00020" : "#155724";
+  messageDiv.style.boxShadow = "0 4px 8px rgba(0,0,0,0.2)";
+  messageDiv.style.zIndex = "1000";
 
   setTimeout(() => {
     messageDiv.style.display = "none";
