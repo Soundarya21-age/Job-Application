@@ -12,6 +12,7 @@ jobForm.addEventListener("submit", async (e) => {
     role: jobForm.role.value,
     status: jobForm.status.value,
     dateApplied: jobForm.dateApplied.value,
+    deadline: jobForm.deadline.value,
     notes: jobForm.notes.value, // Fixed: was `note` before
   };
 
