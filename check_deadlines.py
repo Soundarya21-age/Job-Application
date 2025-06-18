@@ -2,14 +2,14 @@ import boto3
 from datetime import datetime
 from botocore.exceptions import ClientError
 
-//# Initialize DynamoDB
+
 dynamodb = boto3.resource('dynamodb', region_name='eu-north-1')
 table = dynamodb.Table('JobApplications')
 
-//# Initialize AWS SES
+
 ses = boto3.client('ses', region_name='eu-north-1')
 
-//# Replace with your SES-verified email
+
 SENDER = "1da22cs162.cs@drait.edu.in"
 RECIPIENT = "1da22cs162.cs@drait.edu.in"  
 SUBJECT = "⏰ Job Application Deadline Alert"
@@ -44,7 +44,7 @@ def send_email(job):
 
 def check_deadlines():
     """Scan all jobs and send alerts for deadlines matching today."""
-    today = datetime.today().strftime('%Y-%m-%d')
+    today = datetime.today().strftime('%m-%d-%Y')
     print(f"🔍 Checking deadlines for: {today}")
 
     response = table.scan()
