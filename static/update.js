@@ -40,6 +40,7 @@ async function loadJobData() {
     document.getElementById("role").value = job.role;
     document.getElementById("status").value = job.status;
     document.getElementById("dateApplied").value = job.dateApplied;
+    document.getElementById("deadline").value = job.deadline;
     document.getElementById("notes").value = job.notes;
   } catch (error) {
     showMessage("Failed to load job.", true);
@@ -61,6 +62,7 @@ async function handleUpdate(e) {
     role: document.getElementById("role").value,
     status: document.getElementById("status").value,
     dateApplied: document.getElementById("dateApplied").value,
+    deadline: document.getElementById("deadline").value,
     notes: document.getElementById("notes").value
   };
 
