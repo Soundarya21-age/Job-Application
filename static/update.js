@@ -1,5 +1,5 @@
 
-const api ="https://job-application-cend.onrender.com"; 
+const api = "https://job-application-cend.onrender.com/api/jobs"; 
 
 // Get jobId from URL
 function getJobIdFromURL() {
