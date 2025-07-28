@@ -1,4 +1,5 @@
-const api = "https://job-application-cend.onrender.com";
+const api = "https://job-application-cend.onrender.com/api/jobs";
+
 
 async function fetchJobs() {
   const res = await fetch(`${api}?t=${Date.now()}`); // Added timestamp
