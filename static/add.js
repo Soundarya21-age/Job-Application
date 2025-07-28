@@ -1,5 +1,5 @@
 
-const api =  "const api =  "https://job-application-cend.onrender.com/api/jobs";
+const api =  "https://job-application-cend.onrender.com/api/jobs";
 
 
 const jobForm = document.getElementById("jobForm");
