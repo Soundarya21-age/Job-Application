@@ -1,5 +1,5 @@
 
-const api = 'http://127.0.0.1:5000/api/jobs';
+const api = "https://job-application-cend.onrender.com";
 
 
 let editMode = false;
